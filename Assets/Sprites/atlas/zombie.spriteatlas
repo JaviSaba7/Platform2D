@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: zombie
+  m_EditorData:
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 0
+    platformSettings: []
+    packingParameters:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    packedHash:
+      serializedVersion: 2
+      Hash: c32ed38e8c9bf6758823fb21266e6819
+    variantMultiplier: 1
+    bindAsDefault: 1
+    finalFormat: 4
+    hashString: c32ed38e8c9bf6758823fb21266e6819
+    totalSpriteSurfaceArea: 377124
+    packables:
+    - {fileID: 102900000, guid: bdca204b697295240b865fa09c3c6294, type: 3}
+    packedSpriteRenderDataKeys:
+    - a41821a9896f38c4485f1c0f7e55875b: 21300000
+    - 6a080e64ff88593468e9c50b98657297: 21300000
+    - ef7da4c4928e9b74a8ba3fc1d36ff9fc: 21300000
+    - f6918b6bfbd419348bda9dfb27088be9: 21300000
+    - 83fae902d8845ee419b6158839b7d745: 21300000
+    - 99ec44e3d441f554a9b4889860945cdb: 21300000
+    - aca482ee8a1b99044a79e37cea578728: 21300000
+    - 2465123638a9d7f43b870c5a62627136: 21300000
+    - 59113d962b9d53d46bf69df502caaf29: 21300000
+    - 46d93fc695ace764780980f3c55da597: 21300000
+    - aa06f1158c537e748b42478fb149f94c: 21300000
+    - c3065695aa433c54f8e89813bec33a1d: 21300000
+    - 38141cbf5def25847bcb3ddfdfd4cbb1: 21300000
+    - 61389b4845f11a34c9f9df065f4619e1: 21300000
+    - 69cfccffac37b984b8ecf3457eea181a: 21300000
+    - c1cca5e9c6275db4ba188d7882a917ec: 21300000
+    - 4da6f92d42c14994c9b3b0ae6a572946: 21300000
+    - 3588a6d820234964eb090d30e9278d1b: 21300000
+    - c72a39888044be44fbcec1f0b4ad235f: 21300000
+    - 1606f40d0e5267144a8b866163f80e7d: 21300000
+    - 59c39a77b6928e64f8278732348fcd69: 21300000
+    - f20910c5ef8461d4792e3fbe865a7533: 21300000
+    - b54549f1cf161724d832187b5b01c0f7: 21300000
+    - 7cc11e99b6ecb4f4a989f65c59342483: 21300000
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300008
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300040
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300032
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300004
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300034
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300028
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300030
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300022
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300014
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300036
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300002
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300016
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300018
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300026
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300038
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300042
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300000
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300044
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300046
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300020
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300006
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300010
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300012
+    - 4e59a9b72488bb640a2e15f44cfcedff: 21300024
+    - a5c7b9273460cb542a20b305b4ad3abe: 21300000
+    - 0329fad89429ab547959e300b212dc4d: 21300000
+    - 98bdba10bcb058444b9580e685627f5c: 21300000
+    - ab05f201e9d4c4340ad878156e17a878: 21300000
+    - 35e3c650e1b14ba4d8026d7c989beb5c: 21300000
+    - 76eb00b386db9d540b914b6780e0175e: 21300000
+    - a89c48d36e9ee9d449f7d214a1ed74dc: 21300000
+    - 64416ea0bd1f7074bb75490da979af8c: 21300000
+    - 2c98ca34b57cd114fb37efe1ba2b9ce3: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: a41821a9896f38c4485f1c0f7e55875b, type: 3}
+  - {fileID: 21300000, guid: 6a080e64ff88593468e9c50b98657297, type: 3}
+  - {fileID: 21300000, guid: ef7da4c4928e9b74a8ba3fc1d36ff9fc, type: 3}
+  - {fileID: 21300000, guid: f6918b6bfbd419348bda9dfb27088be9, type: 3}
+  - {fileID: 21300000, guid: 83fae902d8845ee419b6158839b7d745, type: 3}
+  - {fileID: 21300000, guid: 99ec44e3d441f554a9b4889860945cdb, type: 3}
+  - {fileID: 21300000, guid: aca482ee8a1b99044a79e37cea578728, type: 3}
+  - {fileID: 21300000, guid: 2465123638a9d7f43b870c5a62627136, type: 3}
+  - {fileID: 21300000, guid: 59113d962b9d53d46bf69df502caaf29, type: 3}
+  - {fileID: 21300000, guid: 46d93fc695ace764780980f3c55da597, type: 3}
+  - {fileID: 21300000, guid: aa06f1158c537e748b42478fb149f94c, type: 3}
+  - {fileID: 21300000, guid: c3065695aa433c54f8e89813bec33a1d, type: 3}
+  - {fileID: 21300000, guid: 38141cbf5def25847bcb3ddfdfd4cbb1, type: 3}
+  - {fileID: 21300000, guid: 61389b4845f11a34c9f9df065f4619e1, type: 3}
+  - {fileID: 21300000, guid: 69cfccffac37b984b8ecf3457eea181a, type: 3}
+  - {fileID: 21300000, guid: c1cca5e9c6275db4ba188d7882a917ec, type: 3}
+  - {fileID: 21300000, guid: 4da6f92d42c14994c9b3b0ae6a572946, type: 3}
+  - {fileID: 21300000, guid: 3588a6d820234964eb090d30e9278d1b, type: 3}
+  - {fileID: 21300000, guid: c72a39888044be44fbcec1f0b4ad235f, type: 3}
+  - {fileID: 21300000, guid: 1606f40d0e5267144a8b866163f80e7d, type: 3}
+  - {fileID: 21300000, guid: 59c39a77b6928e64f8278732348fcd69, type: 3}
+  - {fileID: 21300000, guid: f20910c5ef8461d4792e3fbe865a7533, type: 3}
+  - {fileID: 21300000, guid: b54549f1cf161724d832187b5b01c0f7, type: 3}
+  - {fileID: 21300000, guid: 7cc11e99b6ecb4f4a989f65c59342483, type: 3}
+  - {fileID: 21300008, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300040, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300032, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300004, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300034, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300028, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300030, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300022, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300014, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300036, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300002, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300016, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300018, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300026, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300038, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300042, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300000, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300044, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300046, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300020, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300006, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300010, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300012, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300024, guid: 4e59a9b72488bb640a2e15f44cfcedff, type: 3}
+  - {fileID: 21300000, guid: a5c7b9273460cb542a20b305b4ad3abe, type: 3}
+  - {fileID: 21300000, guid: 0329fad89429ab547959e300b212dc4d, type: 3}
+  - {fileID: 21300000, guid: 98bdba10bcb058444b9580e685627f5c, type: 3}
+  - {fileID: 21300000, guid: ab05f201e9d4c4340ad878156e17a878, type: 3}
+  - {fileID: 21300000, guid: 35e3c650e1b14ba4d8026d7c989beb5c, type: 3}
+  - {fileID: 21300000, guid: 76eb00b386db9d540b914b6780e0175e, type: 3}
+  - {fileID: 21300000, guid: a89c48d36e9ee9d449f7d214a1ed74dc, type: 3}
+  - {fileID: 21300000, guid: 64416ea0bd1f7074bb75490da979af8c, type: 3}
+  - {fileID: 21300000, guid: 2c98ca34b57cd114fb37efe1ba2b9ce3, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - zombie_skid
+  - zombie_slide
+  - zombie_swim1
+  - zombie_hurt
+  - zombie_swim2
+  - zombie_hang
+  - zombie_stand
+  - zombie_talk
+  - zombie_walk1
+  - zombie_walk2
+  - zombie_hold1
+  - zombie_hold2
+  - zombie_kick
+  - zombie_action2
+  - zombie_action1
+  - zombie_cheer1
+  - zombie_back
+  - zombie_cheer2
+  - zombie_duck
+  - zombie_idle
+  - zombie_jump
+  - zombie_climb1
+  - zombie_climb2
+  - zombie_fall
+  - zombie_tilesheet_4
+  - zombie_tilesheet_20
+  - zombie_tilesheet_16
+  - zombie_tilesheet_2
+  - zombie_tilesheet_17
+  - zombie_tilesheet_14
+  - zombie_tilesheet_15
+  - zombie_tilesheet_11
+  - zombie_tilesheet_7
+  - zombie_tilesheet_18
+  - zombie_tilesheet_1
+  - zombie_tilesheet_8
+  - zombie_tilesheet_9
+  - zombie_tilesheet_13
+  - zombie_tilesheet_19
+  - zombie_tilesheet_21
+  - zombie_tilesheet_0
+  - zombie_tilesheet_22
+  - zombie_tilesheet_23
+  - zombie_tilesheet_10
+  - zombie_tilesheet_3
+  - zombie_tilesheet_5
+  - zombie_tilesheet_6
+  - zombie_tilesheet_12
+  - head
+  - head_back
+  - head_hurt
+  - head_focus
+  - body_front
+  - body_back
+  - arm
+  - leg
+  - hand
+  m_Tag: zombie
+  m_IsVariant: 0
