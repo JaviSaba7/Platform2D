@@ -13,10 +13,10 @@ public class InputManager : MonoBehaviour
     public GameObject life_break;
 
     public CollisionDetection collisionDetection;
-     public Rigidbody2D rb2D;
+    public Rigidbody2D rb2D;
     public GameObject restart_button;
     public GameObject player;
-
+    public bool shipEnable;
     public Camera camera;
     public GameObject lose_image;
 
@@ -31,7 +31,7 @@ public class InputManager : MonoBehaviour
     private float currentPosX;
     public AudioSource startSound;
     public AudioSource song;
-
+    public GameObject ship;
     public bool gameStart = false;
     public GameObject menu;
     public float hitForce = 3;
@@ -56,7 +56,7 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        if(jumpSystem)
+       /* if(jumpSystem)
         {
             canJump = false;
             counterToJump++;
@@ -67,26 +67,25 @@ public class InputManager : MonoBehaviour
                 counterToJump = 0;
             }
 
-        }
+        }*/
 
         if (gameStart)
         {
-
             if(!collisionDetection.isWalled) rb2D.velocity = new Vector2(levelSpeed, rb2D.velocity.y);
             else rb2D.velocity = new Vector2(0, rb2D.velocity.y);
 
-            if (Input.GetKeyDown(KeyCode.Space) && canJump == true)
+            if (Input.GetKeyDown(KeyCode.Space) && collisionDetection.isGrounded == true)
             {
                 jumpSystem = true;
-                rb2D.AddForce(player.transform.up * jumpForce, ForceMode2D.Impulse);
-
-                
+                rb2D.AddForce(player.transform.up * jumpForce, ForceMode2D.Impulse);    
             }
         }
         else
         {
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
         }
+
+        if(shipEnable) collisionDetection.isGrounded = true;
 
     }
 
@@ -96,7 +95,6 @@ public class InputManager : MonoBehaviour
 
         restart_button.SetActive(false);
 
-        Debug.Log("LIVE");
         sprite.SetActive(false);
         life.SetActive(true);
         life_break.SetActive(false);
@@ -110,8 +108,6 @@ public class InputManager : MonoBehaviour
     public void StartGame()
     {
         menu.SetActive(false);
-        Debug.Log("HOLA");
-        // start = false;
         startSound.Play();
         song.Play();
         black.SetActive(true);
@@ -138,7 +134,11 @@ public class InputManager : MonoBehaviour
     {
         Debug.Log("Win");
 
-        win.SetActive(true);
+        //win.SetActive(true);
+        sprite.SetActive(false);
+        shipEnable = true;
+        ship.SetActive(true);
+        
 
     }
 
