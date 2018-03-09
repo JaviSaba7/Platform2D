@@ -5,15 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour
 {
+
+    public Vector3 initialPosition = new Vector3(-8.79f, 4, 0);
+    public AudioSource defeat;
+    public GameObject sprite;
+    public GameObject life;
+    public GameObject life_break;
+
     public CollisionDetection collisionDetection;
-
-    public Rigidbody2D rb2D;
-
+     public Rigidbody2D rb2D;
+    public GameObject restart_button;
     public GameObject player;
 
     public Camera camera;
-    public GameObject[] hpDisplay;
-
+    public GameObject lose_image;
 
     public float iniPosX;
     public float iniPosY;
@@ -24,51 +29,58 @@ public class InputManager : MonoBehaviour
 
     private float continueSpeed;
     private float currentPosX;
+    public AudioSource startSound;
+    public AudioSource song;
 
-    public bool gameStarted = false;
-
+    public bool gameStart = false;
+    public GameObject menu;
     public float hitForce = 3;
     public float hitForceX;
     public float hitForceY;
     public float stunTime = 1.5f;
+    public GameObject black;
+    public GameObject win;
+    public bool canJump = true;
+    public bool start = false;
+    public float counterToJump;
 
-    [SerializeField] private bool stun;
-
+    public bool jumpSystem;
     // Use this for initialization
     void Start()
     {
-
-        currentPosX = player.transform.position.x;
-
+        menu.SetActive(true);
         continueSpeed = levelSpeed;
 
     }
 
     // Update is called once per frame
     void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
+    { 
+        if(jumpSystem)
         {
-            gameStarted = !gameStarted;
+            canJump = false;
+            counterToJump++;
+            if (counterToJump >=50)
+            {
+                canJump = true;
+                jumpSystem = false;
+                counterToJump = 0;
+            }
+
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (gameStart)
         {
-            Restart();
-        }
-
-        if (stun) return;
-
-        if (gameStarted)
-        {
-
 
             if (!collisionDetection.isWalled) rb2D.velocity = new Vector2(levelSpeed, rb2D.velocity.y);
             else rb2D.velocity = new Vector2(0, rb2D.velocity.y);
 
-            if (Input.GetKeyDown(KeyCode.S) && collisionDetection.isGrounded)
+            if (Input.GetKeyDown(KeyCode.Space) && canJump == true)
             {
+                jumpSystem = true;
                 rb2D.AddForce(player.transform.up * jumpForce, ForceMode2D.Impulse);
+
+                
             }
         }
         else
@@ -76,55 +88,59 @@ public class InputManager : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
         }
 
-        HPUpdate();
     }
 
-    void Restart()
+    public void Restart()
     {
-        SceneManager.LoadScene("Gameplay");
+        player.transform.position = initialPosition;
+
+        restart_button.SetActive(false);
+
+        Debug.Log("LIVE");
+        sprite.SetActive(false);
+        life.SetActive(true);
+        life_break.SetActive(false);
+        lose_image.SetActive(false);
+        gameStart = true;
+
     }
 
-    public void Damage(int d)
+
+
+    public void StartGame()
     {
-        characterHP -= d;
+        menu.SetActive(false);
+        Debug.Log("HOLA");
+        // start = false;
+        startSound.Play();
+        song.Play();
+        black.SetActive(true);
+        gameStart = true;
 
-        stun = true;
-        rb2D.velocity = Vector2.zero;
-        rb2D.AddForce(new Vector2(hitForceX, hitForceY) * hitForce, ForceMode2D.Impulse);
 
-        StartCoroutine(StunPlayer());
-        if (characterHP <= 0) Dead();
+
+
     }
-
     public void Dead()
     {
-        Debug.Log("LOSE");
-        gameStarted = false;
+        restart_button.SetActive(true);
+
+        Debug.Log("Die");
+        defeat.Play();
+        gameStart = false;
+        sprite.SetActive(true);
+        life.SetActive(false);
+        life_break.SetActive(true);
+        lose_image.SetActive(true);
     }
 
-    public void HPUpdate()
+    public void Win()
     {
-        if (characterHP == 3)
-        {
-            hpDisplay[2].SetActive(true);
-            hpDisplay[1].SetActive(true);
-            hpDisplay[0].SetActive(true);
-        }
-        if (characterHP == 2)
-        {
-            hpDisplay[2].SetActive(false);
-        }
-        if (characterHP == 1)
-        {
-            hpDisplay[1].SetActive(false);
-        }
+        Debug.Log("Win");
+
+        win.SetActive(true);
+
     }
 
-    public IEnumerator StunPlayer()
-    {
-        yield return new WaitForSeconds(stunTime);
 
-        stun = false;
-        Debug.Log("End stun");
-    }
 }

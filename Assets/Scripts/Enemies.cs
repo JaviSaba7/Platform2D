@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Enemies : MonoBehaviour
 {
-    public InputManager inputBehaviour;
 
-    public int hitDamage = 1;
+    public InputManager input;
 
-    // Use this for initialization
+    void Start()
+    {
 
-
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            inputBehaviour.Damage(hitDamage);
-            Debug.Log("HELLO");
+            input.Dead();
+
         }
     }
 }
