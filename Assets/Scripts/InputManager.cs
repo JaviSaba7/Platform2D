@@ -72,7 +72,7 @@ public class InputManager : MonoBehaviour
         if (gameStart)
         {
 
-            if (!collisionDetection.isWalled) rb2D.velocity = new Vector2(levelSpeed, rb2D.velocity.y);
+            if(!collisionDetection.isWalled) rb2D.velocity = new Vector2(levelSpeed, rb2D.velocity.y);
             else rb2D.velocity = new Vector2(0, rb2D.velocity.y);
 
             if (Input.GetKeyDown(KeyCode.Space) && canJump == true)
