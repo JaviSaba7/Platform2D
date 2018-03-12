@@ -135,10 +135,9 @@ public class InputManager : MonoBehaviour
         Debug.Log("Win");
 
         //win.SetActive(true);
-        sprite.SetActive(false);
         shipEnable = true;
         ship.SetActive(true);
-        
+        collisionDetection.GetComponent<CollisionDetection>().enabled = false;
 
     }
 

@@ -17,7 +17,7 @@ public class CollisionDetection : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //CheckGround();
+        CheckGround();
     }
 
     void CheckGround()
