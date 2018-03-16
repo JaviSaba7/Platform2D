@@ -43,7 +43,8 @@ public class InputManager : MonoBehaviour
     public bool canJump = true;
     public bool start = false;
     public float counterToJump;
-
+    public float counterToAppearImage;
+    public GameObject image;
     public bool jumpSystem;
     // Use this for initialization
     void Start()
@@ -71,7 +72,20 @@ public class InputManager : MonoBehaviour
 
         if (gameStart)
         {
-            if(!collisionDetection.isWalled) rb2D.velocity = new Vector2(levelSpeed, rb2D.velocity.y);
+            counterToAppearImage++;
+            if (counterToAppearImage < 10) image.SetActive(false);
+            if (counterToAppearImage < 20 && counterToAppearImage > 10) image.SetActive(true);
+            if (counterToAppearImage < 30 && counterToAppearImage > 20) image.SetActive(false);
+            if (counterToAppearImage < 40 && counterToAppearImage > 30) image.SetActive(true);
+            if (counterToAppearImage < 50 && counterToAppearImage > 40) image.SetActive(false);
+            if (counterToAppearImage < 60 && counterToAppearImage > 50) image.SetActive(true);
+            if (counterToAppearImage < 70 && counterToAppearImage > 60) image.SetActive(false);
+            if (counterToAppearImage < 80 && counterToAppearImage > 70) image.SetActive(true);
+            if (counterToAppearImage < 90 && counterToAppearImage > 80) image.SetActive(false);
+            if (counterToAppearImage > 90 ) image.SetActive(true);
+
+
+            if (!collisionDetection.isWalled) rb2D.velocity = new Vector2(levelSpeed, rb2D.velocity.y);
             else rb2D.velocity = new Vector2(0, rb2D.velocity.y);
 
             if (Input.GetKeyDown(KeyCode.Space) && collisionDetection.isGrounded == true)
@@ -94,6 +108,7 @@ public class InputManager : MonoBehaviour
         player.transform.position = initialPosition;
 
         restart_button.SetActive(false);
+        counterToAppearImage = 0;
 
         sprite.SetActive(false);
         life.SetActive(true);
