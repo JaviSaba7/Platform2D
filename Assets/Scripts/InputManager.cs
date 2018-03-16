@@ -11,7 +11,8 @@ public class InputManager : MonoBehaviour
     public GameObject sprite;
     public GameObject life;
     public GameObject life_break;
-
+    public Change change;
+    public Return return1;
     public CollisionDetection collisionDetection;
     public Rigidbody2D rb2D;
     public GameObject restart_button;
@@ -46,6 +47,8 @@ public class InputManager : MonoBehaviour
     public float counterToAppearImage;
     public GameObject image;
     public bool jumpSystem;
+
+    public bool fly = false;
     // Use this for initialization
     void Start()
     {
@@ -56,21 +59,8 @@ public class InputManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-       /* if(jumpSystem)
-        {
-            canJump = false;
-            counterToJump++;
-            if (counterToJump >=50)
-            {
-                canJump = true;
-                jumpSystem = false;
-                counterToJump = 0;
-            }
-
-        }*/
-
-        if (gameStart)
+    {
+        if(gameStart)
         {
             counterToAppearImage++;
             if (counterToAppearImage < 10) image.SetActive(false);
@@ -115,10 +105,14 @@ public class InputManager : MonoBehaviour
         life_break.SetActive(false);
         lose_image.SetActive(false);
         gameStart = true;
+        shipEnable = false;
+        ship.SetActive(false);
+        collisionDetection.GetComponent<CollisionDetection>().enabled = true;
+        collisionDetection.GetComponent<Fly>().enabled = false;
+        change.disappear.SetActive(true);
+        return1.disappear.SetActive(true);
 
     }
-
-
 
     public void StartGame()
     {
@@ -127,10 +121,6 @@ public class InputManager : MonoBehaviour
         song.Play();
         black.SetActive(true);
         gameStart = true;
-
-
-
-
     }
     public void Dead()
     {
@@ -149,11 +139,23 @@ public class InputManager : MonoBehaviour
     {
         Debug.Log("Win");
 
-        //win.SetActive(true);
+        win.SetActive(true);
+    }
+
+    public void Change()
+    {
         shipEnable = true;
         ship.SetActive(true);
         collisionDetection.GetComponent<CollisionDetection>().enabled = false;
+        collisionDetection.GetComponent<Fly>().enabled = true;
+    }
 
+    public void Return()
+    {
+        shipEnable = false;
+        ship.SetActive(false);
+        collisionDetection.GetComponent<CollisionDetection>().enabled = true;
+        collisionDetection.GetComponent<Fly>().enabled = false;
     }
 
 

@@ -14,7 +14,6 @@ public class CollisionDetection : MonoBehaviour
     public Vector2  rayOffset;
     public ContactFilter2D filter;
 
-
     private void FixedUpdate()
     {
         CheckGround();
