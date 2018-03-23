@@ -122,6 +122,11 @@ public class InputManager : MonoBehaviour
         black.SetActive(true);
         gameStart = true;
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
     public void Dead()
     {
         restart_button.SetActive(true);
